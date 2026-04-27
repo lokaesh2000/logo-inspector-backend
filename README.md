@@ -5,6 +5,11 @@ An enterprise-grade Computer Vision pipeline designed to automatically detect, a
 Built to handle extreme edge cases, this system processes images at any orientation, overcomes loose AI bounding boxes, and filters out sub-pixel mathematical noise to generate production-ready visual proofs and JSON coordinate data.
 
 ---
+## 🔗 Quick Links
+* **Live Test Deployment:** https://logo-inspector-frontend.vercel.app/
+* **Dataset Used:** https://app.roboflow.com/traail/stickerlogo/2
+
+---
 
 ## 🧠 The Problem & How I Solved It
 
@@ -48,3 +53,20 @@ This prevents system-wide package conflicts (resolving PEP 668 errors on macOS).
 python3 -m venv venv
 source venv/bin/activate
 ```
+
+### 3. Install Dependencies
+```bash
+pip3 install -r requirements.txt
+```
+
+### 4. Run the Inspector
+Pass the path of the image you want to test directly into the command:
+```bash
+python3 test.py path/to/your/test_image.png
+```
+
+### 5. View the Results
+The script will output a structured JSON payload to the terminal containing the total defects found and their exact [x, y, width, height] coordinates.
+
+It will also generate a visual proof image saved to your current directory as inspected_[filename].png, with perfect, tight green bounding boxes drawn around the confirmed defects.
+
