@@ -40,3 +40,11 @@ If you want to test the raw Computer Vision pipeline on your local machine, use 
 ```bash
 git clone [https://github.com/lokaesh2000/logo-inspector-backend.git](https://github.com/lokaesh2000/logo-inspector-backend.git)
 cd logo-inspector-backend
+```
+
+### 2. Set up a Python Virtual Environment (Recommended)
+This prevents system-wide package conflicts (resolving PEP 668 errors on macOS).
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
